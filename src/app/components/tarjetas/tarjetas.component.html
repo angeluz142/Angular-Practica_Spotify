@@ -1,0 +1,12 @@
+<div class="card-columns animated fadeIn">
+    <div (click)="verArtista(item)" class="card puntero" *ngFor="let item of Items">
+      <img [src]="item.images | noimage" class="card-img-top" alt="algum-cover">
+      <div class="card-body">
+        <h5 class="card-title"> {{ item.name }} </h5>
+        <p class="card-text">
+            <span *ngFor="let artista of item.artists" class="badge badge-primary"> {{ artista.name }} </span>
+        </p>
+        <p class="card-text"><small class="text-muted"> {{ item.release_date }} </small></p>
+      </div>
+    </div>
+</div>

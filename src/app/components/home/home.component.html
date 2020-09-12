@@ -1,0 +1,13 @@
+<app-loading *ngIf="loading && !error" ></app-loading>
+
+
+<div *ngIf="error" class="card text-white mb-5 bg-danger">
+    <div class="card-header">
+      Error
+    </div>
+    <div class="card-body">      
+      <p class="card-text text-white"> {{mensajeError}} </p>
+    </div>
+  </div>
+
+<app-tarjetas [Items]="nuevosAlbunes" ></app-tarjetas>
